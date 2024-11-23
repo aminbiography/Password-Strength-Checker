@@ -22,5 +22,5 @@ Save Time and Effort: With instant feedback, you won’t need to search for pass
 Customizable and Scalable: As a developer or cybersecurity enthusiast, you can adapt this tool to suit your needs—whether that means customizing its logic, design, or functionality to better fit your project requirements.
 Why It’s Important for You:
 The importance of strong passwords cannot be overstated. In a world where data breaches and hacking attempts are on the rise, using weak or easily guessable passwords exposes you to significant risks. This tool provides a simple yet powerful way to strengthen your online defenses.
-<br>
+<br><br>
 Whether you're a casual internet user or a cybersecurity professional, this Password Strength Checker serves as a practical, hands-on resource to help you protect yourself and your organization from the growing threats of the digital age.
