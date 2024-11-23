@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          min-height: 50vh; /* Adjust for all screen sizes */
+          text-align: center;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+        margin: 20px auto; /* Centering the form container */
+        padding: 20px;
+        border-radius: 12px;
+        background-color: rgba(255, 255, 255, 0.1); /* Optional: light background for the container */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Default box shadow */
+        transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+      }
+  
+      h1 {
+          width: 90%; /* Adjust width for responsiveness */
+          max-width: 600px; /* Limit maximum width for larger screens */
+          font-weight: bold;
+          padding: 10px 20px;
+          color: white;
+          background: linear-gradient(45deg, #ff6a00, #ff1493, #00bfff, #32cd32);
+          background-size: 400% 400%;
+          animation: gradientAnimation 10s ease infinite;
+          border-radius: 10px;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+          text-align: center;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+          margin-bottom: 20px;
+          border: 2px solid #fff;
+          transition: transform 0.3s ease;
+          position: relative;
+      }
+  
+      h1:hover {
+          transform: scale(1.05);
+      }
+  
+      h1::after {
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 0;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-top: 10px solid #9B51B4;
+          transition: border-color 0.3s ease;
+      }
+  
+      h1:hover::after {
+          border-top-color: #C737C0;
+      }
+  
+      @keyframes gradientAnimation {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+      }
+  
+      input {
+          width: 90%;
+          max-width: 400px;
+          padding: 10px 20px;
+          margin: 10px 0;
+          font-size: 1rem;
+          border: 2px solid #ff6a00;
+          border-radius: 8px;
+          background: linear-gradient(45deg, #ff6a00, #ff1493, #00bfff, #32cd32);
+          background-size: 400% 400%;
+          animation: gradientAnimation 10s ease infinite;
+          color: #fff;
+          outline: none;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+  
+      input::placeholder {
+          text-align: center;
+          color: #ffffffcc;
+      }
+  
+      input:focus {
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+          transform: scale(1.02);
+      }
+  
+      .button-container {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
+      }
+  
+      button {
+          width: 80%;
+          max-width: 200px; /* Limit button size on larger screens */
+          padding: 10px 20px;
+          background: linear-gradient(45deg, #9B51B4, #C737C0, #6A0DAD, #D02AB8);
+          background-size: 400% 400%;
+          animation: gradientAnimation 10s ease infinite;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          border-radius: 8px;
+          font-size: 1rem;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          margin-top: 15px;
+      }
+  
+      button:hover {
+          transform: scale(1.05);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .result {
+        width: 90%;
+        max-width: 600px;
+        margin-top: 20px;
+        font-weight: bold;
+        padding: 10px 20px;
+        background: linear-gradient(45deg, #ff6a00, #ff1493, #00bfff, #32cd32);
+        background-size: 400% 400%;
+        animation: gradientAnimation 10s ease infinite;
+        color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        font-size: 1.5rem;
+        border: 2px solid #fff;
+        transition: transform 0.3s ease;
+    }
+
+    .result:hover {
+        transform: scale(1.05);
+    }
+  
+      @media (max-width: 768px) {
+          h1, .result {
+              font-size: 1.2rem; /* Adjust font size for tablets and smaller devices */
+          }
+  
+          input {
+              font-size: 0.9rem; /* Adjust input font size */
+          }
+  
+          button {
+              font-size: 0.9rem; /* Adjust button font size */
+          }
+      }
+  
+      @media (max-width: 480px) {
+          h1, .result {
+              font-size: 1rem;
+          }
+  
+          input, button {
+              font-size: 0.8rem;
+          }
+      }
+
+      /* Box shadow adjustment for smaller screens */
+    @media (max-width: 768px) {
+    .container {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slightly smaller shadow on smaller screens */
+    }
+    }
+
+    /* Box shadow adjustment for very small screens */
+    @media (max-width: 480px) {
+    .container {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Even smaller shadow on mobile */
+    }
+    }
+
+    .container:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Shadow becomes more prominent on hover */
+    }
+  </style>
+  
+</head>
+<body>
+    <div class="container">
+        <h1>Password Strength Checker</h1>
+        <div class="input-group">
+            <input type="password" id="password" placeholder="Enter your password">
+        </div>
+        <div class="button-container">
+        <button id="checkButton">Check Strength</button>
+        <button id="refreshButton">Refresh</button>
+        </div>
+        <div class="result" id="result"></div>
+    </div>
+
+    <py-script>
+        import js
+        import re
+
+        def check_password_strength(password):
+            # Debugging log
+            print(f"Checking password: {password}")
+
+            # Check password length
+            if len(password) < 1:
+                return "Please enter your password in the above input field."
+            
+            # Check password length
+            if len(password) < 8:
+                return "Password is too short! It should be at least 8 characters long."
+            
+            # Check for uppercase letters
+            if not re.search(r'[A-Z]', password):
+                return "Password should include at least one uppercase letter."
+            
+            # Check for lowercase letters
+            if not re.search(r'[a-z]', password):
+                return "Password should include at least one lowercase letter."
+            
+            # Check for digits
+            if not re.search(r'[0-9]', password):
+                return "Password should include at least one digit."
+            
+            # Check for special characters
+            if not re.search(r'[!@#$%^&*(),.?":{}|<>]', password):
+                return "Password should include at least one special character."
+            
+            return "Password is strong!"
+
+        def check_password(event):
+            # Get the password value from the input field
+            password = js.document.getElementById("password").value
+            
+            # Check password strength
+            result = check_password_strength(password)
+            
+            # Display the result
+            js.document.getElementById("result").innerText = result
+
+        def refresh(event):
+            # Clear the input field and result
+            js.document.getElementById("password").value = ""
+            js.document.getElementById("result").innerText = ""
+
+        # Attach event listener to the "Check Strength" button
+        check_button = js.document.getElementById("checkButton")
+        check_button.addEventListener("click", check_password)
+
+        # Attach event listener to the "Refresh" button
+        refresh_button = js.document.getElementById("refreshButton")
+        refresh_button.addEventListener("click", refresh)
+    </py-script>
+    <script>
+        // Function to check the password strength
+        function checkPasswordStrength(password) {
+             // Check password length
+            if (password.length < 1) {
+            return "Please enter your password in the above input field.";
+            }
+
+            // Check password length
+            if (password.length < 8) {
+                return "Password is too short! It should be at least 8 characters long.";
+            }
+            
+            // Check for at least one uppercase letter
+            if (!/[A-Z]/.test(password)) {
+                return "Password should include at least one uppercase letter.";
+            }
+            
+            // Check for at least one lowercase letter
+            if (!/[a-z]/.test(password)) {
+                return "Password should include at least one lowercase letter.";
+            }
+            
+            // Check for at least one digit
+            if (!/[0-9]/.test(password)) {
+                return "Password should include at least one digit.";
+            }
+            
+            // Check for at least one special character
+            if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+                return "Password should include at least one special character.";
+            }
+            
+            // If all conditions are met
+            return "Password is strong!";
+        }
+    
+        // Event listener for checking password strength
+        document.getElementById("checkButton").addEventListener("click", function() {
+            var password = document.getElementById("password").value;
+            var result = checkPasswordStrength(password);
+            document.getElementById("result").innerText = result;
+        });
+    
+        // Event listener for refreshing the input and result
+        document.getElementById("refreshButton").addEventListener("click", function() {
+            document.getElementById("password").value = ""; // Clear password input
+            document.getElementById("result").innerText = ""; // Clear result message
+        });
+    </script>
+    
+</body>
+</html>
