@@ -16,6 +16,7 @@ Why Should You Know About This Project?
 Boost Your Cybersecurity Awareness: This tool helps you understand what makes a password strong and why these factors are critical for protecting your accounts.
 Improve Your Passwords: Test your existing passwords and get suggestions for stronger alternatives to follow best practices for online security.
 Learning Opportunity for Developers: If you're a developer or aspiring cybersecurity expert, this project offers a unique opportunity to explore how Python can be integrated with web technologies (via PyScript) to build secure, client-side applications.
+<br><br>
 Cybersecurity Benefits for You:
 Protect Your Online Presence: By using this Password Strength Checker, you’re taking a proactive step in safeguarding your personal and professional data from potential cyber threats.
 Save Time and Effort: With instant feedback, you won’t need to search for password guidelines or consult external tools. You’ll quickly know what works and what doesn’t, making your password creation process more efficient.
