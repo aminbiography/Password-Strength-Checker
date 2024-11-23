@@ -11,20 +11,21 @@ Minimum length: Ensuring passwords are at least 8 characters long
 Complexity: Checking for a mix of uppercase letters, lowercase letters, digits, and special characters
 User-Friendly Interface: Designed for ease of use, this tool is fully responsive across devices (desktops, tablets, and mobile phones).
 Instant Feedback: You’ll get real-time feedback on your password strength, allowing you to make immediate adjustments and enhance your password security.
-<br>
+<br><br>
 Powered by PyScript: This project utilizes Python through PyScript to deliver client-side validation and real-time results, ensuring a seamless experience directly in your browser.
 Why Should You Know About This Project?
-<br>
+<br><br>
 Boost Your Cybersecurity Awareness: This tool helps you understand what makes a password strong and why these factors are critical for protecting your accounts.
-<br>
+<br><br>
 Improve Your Passwords: Test your existing passwords and get suggestions for stronger alternatives to follow best practices for online security.
 Learning Opportunity for Developers: If you're a developer or aspiring cybersecurity expert, this project offers a unique opportunity to explore how Python can be integrated with web technologies (via PyScript) to build secure, client-side applications.
 <br><br>
 Cybersecurity Benefits for You:
 Protect Your Online Presence: By using this Password Strength Checker, you’re taking a proactive step in safeguarding your personal and professional data from potential cyber threats.
-<br>
+<br><br>
 Save Time and Effort: With instant feedback, you won’t need to search for password guidelines or consult external tools. You’ll quickly know what works and what doesn’t, making your password creation process more efficient.
 Customizable and Scalable: As a developer or cybersecurity enthusiast, you can adapt this tool to suit your needs—whether that means customizing its logic, design, or functionality to better fit your project requirements.
+<br><br>
 Why It’s Important for You:
 The importance of strong passwords cannot be overstated. In a world where data breaches and hacking attempts are on the rise, using weak or easily guessable passwords exposes you to significant risks. This tool provides a simple yet powerful way to strengthen your online defenses.
 <br><br>
