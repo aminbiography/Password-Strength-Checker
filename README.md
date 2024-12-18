@@ -5,7 +5,7 @@ Live URL:  https://aminbiography.github.io/Password-Strength-Checker/
 ====================================================================================================================================================================================================================================================================================================================================================================================================
 
 <h1>Password Strength Checker: Enhance Your Cybersecurity:</h1>
-Welcome to the Password Strength Checker project—an essential tool designed to help you evaluate the strength of your passwords and improve your cybersecurity. In today's digital world, password security is crucial, and this interactive web application gives you immediate feedback on your password strength, guiding you to create stronger, more secure passwords.
+Welcome to the Password Strength Checker project an essential tool designed to help you evaluate the strength of your passwords and improve your cybersecurity. In today's digital world, password security is crucial, and this interactive web application gives you immediate feedback on your password strength, guiding you to create stronger, more secure passwords.
 <br><br>
 <h1>Objectives of the Project:</h1>
 Password Validation: The tool assesses your password against key security criteria, including:
@@ -26,7 +26,7 @@ Learning Opportunity for Developers: If you're a developer or aspiring cybersecu
 Protect Your Online Presence: By using this Password Strength Checker, you’re taking a proactive step in safeguarding your personal and professional data from potential cyber threats.
 <br><br>
 Save Time and Effort: With instant feedback, you won’t need to search for password guidelines or consult external tools. You’ll quickly know what works and what doesn’t, making your password creation process more efficient.
-Customizable and Scalable: As a developer or cybersecurity enthusiast, you can adapt this tool to suit your needs—whether that means customizing its logic, design, or functionality to better fit your project requirements.
+Customizable and Scalable: As a developer or cybersecurity enthusiast, you can adapt this tool to suit your needs whether that means customizing its logic, design, or functionality to better fit your project requirements.
 <br><br>
 Why It’s Important for You:
 The importance of strong passwords cannot be overstated. In a world where data breaches and hacking attempts are on the rise, using weak or easily guessable passwords exposes you to significant risks. This tool provides a simple yet powerful way to strengthen your online defenses.
