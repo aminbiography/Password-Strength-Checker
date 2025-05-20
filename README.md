@@ -32,3 +32,4 @@ The importance of strong passwords cannot be overstated. In a world where data b
 <br><br>
 Whether you're a casual internet user or a cybersecurity professional, this Password Strength Checker serves as a practical, hands-on resource to help you protect yourself and your organization from the growing threats of the digital age.
 
+
