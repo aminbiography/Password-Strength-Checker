@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Strength Checker</title>
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <!-- Replace with the latest stable version -->
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <!-- PyScript package configuration -->
+    <script type="py-config">
+        packages = ["re"]
+    </script>
+
     <style>
       body {
           font-family: Arial, sans-serif;
@@ -13,7 +20,7 @@
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          min-height: 85vh; /* Adjust for all screen sizes */
+          min-height: 85vh; 
           text-align: center;
       }
 
@@ -22,17 +29,17 @@
         max-width: 600px;
         height: auto;
         text-align: center;
-        margin: 20px auto; /* Centering the form container */
+        margin: 20px auto; 
         padding: 20px;
         border-radius: 12px;
-        background-color: rgba(255, 255, 255, 0.1); /* Optional: light background for the container */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Default box shadow */
-        transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+        background-color: rgba(255, 255, 255, 0.1); 
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+        transition: box-shadow 0.3s ease; 
       }
   
       h1 {
-          width: 90%; /* Adjust width for responsiveness */
-          max-width: 600px; /* Limit maximum width for larger screens */
+          width: 90%; 
+          max-width: 600px; 
           font-weight: bold;
           padding: 10px 20px;
           color: white;
@@ -108,12 +115,12 @@
           display: flex;
           justify-content: center;
           gap: 10px;
-          flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
+          flex-wrap: wrap; 
       }
   
       button {
           width: 80%;
-          max-width: 200px; /* Limit button size on larger screens */
+          max-width: 200px; 
           padding: 10px 20px;
           background: linear-gradient(45deg, #9B51B4, #C737C0, #6A0DAD, #D02AB8);
           background-size: 400% 400%;
@@ -154,18 +161,18 @@
     .result:hover {
         transform: scale(1.05);
     }
-  
+
       @media (max-width: 768px) {
           h1, .result {
-              font-size: 1.2rem; /* Adjust font size for tablets and smaller devices */
+              font-size: 1.2rem; 
           }
   
           input {
-              font-size: 0.9rem; /* Adjust input font size */
+              font-size: 0.9rem; 
           }
   
           button {
-              font-size: 0.9rem; /* Adjust button font size */
+              font-size: 0.9rem; 
           }
       }
   
@@ -179,22 +186,26 @@
           }
       }
 
-      /* Box shadow adjustment for smaller screens */
+    /* Box shadow adjustment for smaller screens */
     @media (max-width: 768px) {
     .container {
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slightly smaller shadow on smaller screens */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
     }
     }
 
     /* Box shadow adjustment for very small screens */
     @media (max-width: 480px) {
     .container {
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Even smaller shadow on mobile */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
     }
     }
 
     .container:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Shadow becomes more prominent on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); 
+    }
+
+    py-script {
+      display: none;
     }
   </style>
   
@@ -269,6 +280,7 @@
         refresh_button = js.document.getElementById("refreshButton")
         refresh_button.addEventListener("click", refresh)
     </py-script>
+
     <script>
         // Function to check the password strength
         function checkPasswordStrength(password) {
@@ -315,10 +327,10 @@
     
         // Event listener for refreshing the input and result
         document.getElementById("refreshButton").addEventListener("click", function() {
-            document.getElementById("password").value = ""; // Clear password input
-            document.getElementById("result").innerText = ""; // Clear result message
+            document.getElementById("password").value = ""; 
+            document.getElementById("result").innerText = ""; 
         });
     </script>
-    
+
 </body>
 </html>
