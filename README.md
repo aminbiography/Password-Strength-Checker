@@ -1,7 +1,7 @@
 Live URL:  https://aminbiography.github.io/Password-Strength-Checker/  
  
    
-=============================================================================
+=====================================================================
 
 <h1>Password Strength Checker: Enhance Your Cybersecurity:</h1>
 Welcome to the Password Strength Checker project an essential tool designed to help you evaluate the strength of your passwords and improve your cybersecurity. In today's digital world, password security is crucial, and this interactive web application gives you immediate feedback on your password strength, guiding you to create stronger, more secure passwords.
