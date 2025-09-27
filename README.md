@@ -1,4 +1,4 @@
-Live URL:  https://aminbiography.github.io/Password-Strength-Checker/  
+Live URL:  https://aminbiography.github.io/Password-Strength-Checker/   
  
    
 =====================================================================
