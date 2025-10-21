@@ -4,11 +4,11 @@ Live URL:  https://aminbiography.github.io/Password-Strength-Checker/
 =====================================================================
 
 
-# Password Strength Checker — Developer & CTI Overview
+# Password Strength Checker - Developer & CTI Overview
 
 ### Purpose
 
-The **Password Strength Checker** is a client-side security utility designed to evaluate password robustness through multiple criteria — promoting better password hygiene and reducing risks associated with weak or easily guessable credentials. For cybersecurity professionals and developers, this serves both as an educational tool and a lightweight audit mechanism.
+The **Password Strength Checker** is a client-side security utility designed to evaluate password robustness through multiple criteria - promoting better password hygiene and reducing risks associated with weak or easily guessable credentials. For cybersecurity professionals and developers, this serves both as an educational tool and a lightweight audit mechanism.
 
 ---
 
@@ -21,7 +21,7 @@ The **Password Strength Checker** is a client-side security utility designed to 
 * **JavaScript** for client-side fallback and real-time validation
 * **Regular Expressions (`re`)** for complex password pattern matching
 
-This hybrid approach demonstrates **multi-language redundancy** — a useful paradigm in secure application design to ensure failover logic if one runtime (JS or PyScript) fails to execute.
+This hybrid approach demonstrates **multi-language redundancy** - a useful paradigm in secure application design to ensure failover logic if one runtime (JS or PyScript) fails to execute.
 
 ---
 
