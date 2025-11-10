@@ -2,7 +2,7 @@ Live URL:  https://aminbiography.github.io/Password-Strength-Checker/
   
    
 =====================================================================
-
+ 
  
 # Password Strength Checker - Developer & CTI Overview
 
